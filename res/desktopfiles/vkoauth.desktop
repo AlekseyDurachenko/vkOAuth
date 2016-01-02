@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=VKontakte application authorization utility
+Name[ru]=Утилита для авторизации приложения ВКонтакте
+
+GenericName=VKontakte application authorization utility
+GenericName[ru]=Утилита для авторизации приложения ВКонтакте
+
+Comment=VKontakte application authorization utility
+Comment[ru]=Утилита для авторизации приложения ВКонтакте
+
+Exec=vkoauth %f
+Icon=vkoauth
+Terminal=false
+Type=Application
+Categories=Qt;Network;
+Keywords=vk;vkontakte;auth;
+Keywords[ru]=вк;вконтакте;авторизация;

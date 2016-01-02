@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/action-quit.png</file>
+        <file>icons/action-about-qt.png</file>
+        <file>icons/action-about.png</file>
+        <file>icons/action-copy-to-clipboard.png</file>
+        <file>icons/vkoauth.png</file>
+    </qresource>
+</RCC>

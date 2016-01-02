@@ -1,4 +1,4 @@
-// Copyright 2013, Durachenko Aleksey V. <durachenko.aleksey@gmail.com>
+// Copyright 2016, Durachenko Aleksey V. <durachenko.aleksey@gmail.com>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -12,30 +12,20 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#ifndef CMAINWINDOW_H
-#define CMAINWINDOW_H
+#ifndef RESOURCES_H
+#define RESOURCES_H
 
-#include <QMainWindow>
 
-namespace Ui {
-class MainWindow;
-}
+#include <QString>
 
-class CMainWindow : public QMainWindow
-{
-    Q_OBJECT    
-public:
-    explicit CMainWindow(QWidget *parent = 0);
-    ~CMainWindow();
 
-private slots:
-    void on_pushButton_OpenAuthPage_clicked();
-    void on_authView_authSuccess(const QString &accessToken, int expiresInSecs, int userId);
-    void on_authView_authFail(const QString &errorCode, const QString &errorDesc);
+QString resourcesPath();
 
-private:
-    Ui::MainWindow *ui;
+QString docsPath();
+QString languagesPath();
 
-};
+QString docResFileName(const QString &fileName);
+QString languageResFileName(const QString &fileName);
 
-#endif // MAINWINDOW_H
+
+#endif // RESOURCES_H

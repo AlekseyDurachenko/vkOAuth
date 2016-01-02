@@ -1,4 +1,4 @@
-// Copyright 2013, Durachenko Aleksey V. <durachenko.aleksey@gmail.com>
+// Copyright 2013-2016, Durachenko Aleksey V. <durachenko.aleksey@gmail.com>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -13,14 +13,34 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QApplication>
-#include "cmainwindow.h"
+#include <QTranslator>
+#include <QLocale>
+#include <QLibraryInfo>
+#include "theme.h"
+#include "version.h"
+#include "resources.h"
+#include "mainwindow.h"
+
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    CMainWindow window;
+    // Qt translator
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(),
+                      QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&qtTranslator);
+    // application translator
+    QTranslator myappTranslator;
+    myappTranslator.load(appName() + QString("_") + QLocale::system().name(),
+                         languagesPath());
+    app.installTranslator(&myappTranslator);
+
+    theme::initialize();
+
+    MainWindow window;
     window.show();
-    
+
     return app.exec();
 }
