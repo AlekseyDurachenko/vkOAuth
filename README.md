@@ -1,7 +1,7 @@
 vkOAuth
 =======
 
-VKontakte application authorization utility.
+VKontakte applications authorization utility.
 
 Homepage: http://alekseydurachenko.github.io/vkoauth/
 

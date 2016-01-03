@@ -1,12 +1,12 @@
 [Desktop Entry]
-Name=VKontakte application authorization utility
-Name[ru]=Утилита для авторизации приложения ВКонтакте
+Name=VKontakte applications authorization utility
+Name[ru]=Утилита для авторизации приложений ВКонтакте
 
-GenericName=VKontakte application authorization utility
-GenericName[ru]=Утилита для авторизации приложения ВКонтакте
+GenericName=VKontakte applications authorization utility
+GenericName[ru]=Утилита для авторизации приложений ВКонтакте
 
-Comment=VKontakte application authorization utility
-Comment[ru]=Утилита для авторизации приложения ВКонтакте
+Comment=VKontakte applications authorization utility
+Comment[ru]=Утилита для авторизации приложений ВКонтакте
 
 Exec=vkoauth %f
 Icon=vkoauth
